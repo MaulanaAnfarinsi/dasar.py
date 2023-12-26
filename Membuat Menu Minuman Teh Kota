@@ -1,0 +1,86 @@
+print("================= MINUMAN TEH KOTA SIMALAKAMA=================")
+Pembeli = input("Nama Pembeli : ")
+print("Nama Pembeli : ")
+
+def minuman():
+    global totalminuman
+    global gelas
+    global minum
+    print("\n=========================MENU MINUMAN=========================")
+    print("1. Jasmine Tea    - Rp.3000")
+    print("2. Leci Tea       - Rp.4000")
+    print("3. Passion Tea    - Rp.5000")
+    print("4. Lemon Tea      - Rp.7500")
+    print("5. Grape Tea      - Rp.7500")
+    print("6. Teh Tarik Aceh - Rp.11000")
+    print("7. Matcha         - Rp.12000")
+    print("8. Red Velvet     - Rp.10000")
+    print("9. Tiramisu       - Rp.10000")
+    print("10.Bubble gum     - Rp.10000")
+    nomor = int(input("Masukkan Pilihan 1/2/3 : "))
+    gelas = int(input("Berapa gelas           : "))
+
+    if nomor == 1:
+        totalminuman = gelas * 3000
+        print(gelas,' Jasmine Tea  = Rp.',totalminuman)
+        minum=("Jasmine Tea")
+    elif nomor == 2:
+        totalminuman = gelas * 4000
+        print(gelas,' Leci Tea = Rp.',totalminuman)
+        minum=("Leci Tea")
+    elif nomor == 3:
+        totalminuman = gelas * 5000
+        print(gelas,' Passion Tea = Rp.',totalminuman)
+        minum=("Passion Tea")
+    elif nomor == 4:
+        totalminuman = gelas * 7500
+        print(gelas,' Lemon Tea = Rp.',totalminuman)
+        minum=("Lemon Tea")
+    elif nomor == 5:
+        totalminuman = gelas * 7500
+        print(gelas,' Grape Tea = Rp.',totalminuman)
+        minum=("Grape Tea")
+    elif nomor == 6:
+        totalminuman = gelas * 11000
+        print(gelas,' Teh Tarik Aceh = Rp.',totalminuman)
+        minum=("Teh Tarik Aceh")
+    elif nomor == 7:
+        totalminuman = gelas * 12000
+        print(gelas,' Matcha = Rp.',totalminuman)
+        minum=("matcha")
+    elif nomor == 8:
+        totalminuman = gelas * 10000
+        print(gelas,' Red Velvet = Rp.',totalminuman)
+        minum=("Red Velvet")
+    elif nomor == 9:
+        totalminuman = gelas * 10000
+        print(gelas,' Tiramisu = Rp.',totalminuman)
+        minum=("Tiramisu")
+    elif nomor == 10:
+        totalminuman = gelas * 10000
+        print(gelas,' Bubble gum = Rp.',totalminuman)
+        minum=("Bubble gum")
+    else:
+        print("Pilihan tidak ada di daftar menu\nSilahkan pilih kembali !!!")
+        minuman()
+
+minuman()
+total_semua =  totalminuman
+
+print("\nTotal yang harus di bayar   : ",total_semua)
+uang      = int(input("Uang Tunai Pembeli : Rp."))
+Kembalian = int(uang - total_semua)
+print("Kembalian : ", Kembalian)
+
+print("\n=========================STRUKBELI=========================")
+print("Nama\t\t: ",Pembeli)
+print("Beli\t\t: ",gelas,minum,"(Rp.",totalminuman,")")
+print("Tagihan\t\t   :Rp. ",total_semua)
+print("Dibayar\t\t   :Rp. ",uang)
+print("Kembalian\t   :Rp. ",Kembalian)
+
+
+
+
+print("=============================================================")
+print("=============================================================")
