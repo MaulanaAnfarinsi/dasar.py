@@ -1,0 +1,28 @@
+import streamlit as st 
+import math
+
+# Menghitung luas permukaan Kubus
+def hitung_luas_permukaan_kubus(s):
+    luas = 6 * s * s
+    return luas
+# Menghitung Volumenya bola
+def hitung_volumenya_bola(r):
+    volume = (4/3) * math.pi * r * r * r
+    return volume
+
+# Membuat tampilan halaman web
+st.title("kalkulator Luas Permukaan Kubus dan Volumenya Bola")
+
+# Meminta input dari user
+s = st.number_input("Masukkan panjang rusuk kubus (cm):")
+r = st.number_input("Masukkan jari-jari bola (cm):")
+
+#Menghitung luas permukaan Kubus
+if st.button("Hitung luas permukaan kubus"):
+    result = hitung_luas_permukaan_kubus(s)
+    st.success(f"Luas permukaan kubus adalah {result}cm^2")
+
+#Menghitung Volumenya bola
+if st.button("Hitung volumenya bola"):
+    result = hitung_volumenya_bola(r)
+    st.success(f"Volumenya bola adalah {result:2f} cm^3")
